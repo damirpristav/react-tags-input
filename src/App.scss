@@ -1,0 +1,115 @@
+$primary-color: #1df9ba;
+$primary-bg-color: #f1f1f1;
+$primary-text-color: #222;
+$primary-border-color: #e1e1e1;
+$error-color: #ff5964;
+$ff-primary: 'Roboto', 'sans-serif';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: $ff-primary;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $primary-text-color;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 36px;
+}
+
+.header {
+  background-color: $primary-bg-color;
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid $primary-border-color;
+  padding: 40px;
+
+  .tags-input {
+    margin-bottom: 15px;
+
+    &.active {
+
+      .tags-input__wrapper {
+        border-color: $primary-text-color;
+      }
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    &__wrapper {
+      border: 1px solid $primary-border-color;
+      padding: 15px 15px 10px;
+      border-radius: 4px;
+      transition: border-color .3s ease;
+    }
+
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      .tag {
+        background-color: $primary-bg-color;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        transition: background-color .3s ease;
+
+        i {
+          margin-left: 5px;
+          cursor: pointer;
+        }
+
+        &:hover {
+          background-color: darken($primary-bg-color, 10);
+        }
+      }
+
+      input {
+        border: 0;
+        outline: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        flex: 1;
+        min-width: 80px;
+      }
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    color: $primary-text-color;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-family: $ff-primary;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10);
+    }
+  }
+
+  .error {
+    padding: 5px 0;
+    color: $error-color;
+    font-size: 12px;
+  }
+}
